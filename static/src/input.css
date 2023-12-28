@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hbtn {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 20px;
+  margin: 0px 3px 6px;
+  text-align: center;
+
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.hbtn {
+  padding-right: 8px;
+}
+
+.hb-fill-right::before {
+  position: absolute;
+  content: "";
+  background: rgb(5, 174, 181);
+  transition-duration: 0.3s;
+  z-index: -1;
+  inset: 0px auto auto 0px;
+  width: 0px;
+  height: 100%;
+  opacity: 1;
+}
+
+.hb-fill-right:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.hb-fill-right:hover {
+  color: white;
+
+  transition: color 0.3s ease 0s, background 0s ease 0.3s;
+}
+.card:hover {
+  scale: 1.1;
+  cursor: pointer;
+  transition: transform 0.5s;
+}

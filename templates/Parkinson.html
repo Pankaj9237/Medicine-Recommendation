@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/main.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="logic.js" />
+    <!-- <link rel="stylesheet" href="Parkinson.css" /> -->
+
+    <title>Document</title>
+    <style>
+      label {
+        font-size: 2rem;
+      }
+      input {
+        height: 3rem;
+        border: 1px solid black;
+      }
+
+      form label,
+      input {
+        margin: 1rem;
+      }
+
+    </style>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="cursor-pointer bg-[#ececec]">
+      <ul
+        class="py-2 shadow-lg bg-slate-300text-gray-950 w-full h-[6rem] flex font-semibold fon"
+      >
+        <li class="mx-5 py-3 p-5 text-2xl hbtn hb-fill-right">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="py-3 p-5 text-2xl hbtn hb-fill-right">
+          <a href="index.html/#AboutUs">About US</a>
+        </li>
+        <li class="mx-5 py-3 p-5 text-2xl hbtn hb-fill-right">
+          <a href="index.html/#Modules">Modules</a>
+        </li>
+        <li class="mx-5 py-3 p-5 text-2xl hbtn hb-fill-right">
+          <a href="index.html/#ContactUs">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- navbar end -->
+    <div
+      class="bg-[url('/assets/heartbg.jpg')] bg-cover font-mono bg-no-repeat"
+    >
+      <h2 class="flex justify-center text-5xl font-bold py-8">
+        Parkinson's Disease Prediction
+      </h2>
+
+      <section class="flex justify-center">
+        <form
+          id="predictionForm"
+          class="w-[60rem] p-[5rem] my-[6rem] max-w-[60rem] flex-col flex bg-transparent border-8 shadow-lg border-slate-500 backdrop-blur-lg border-solid rounded-[1rem]"
+        >
+          <label for="Fo">MDVP:Fo(Hz)</label><br />
+          <input type="text" id="Fo" name="Fo" required /><br /><br />
+
+          <label for="Fhi">MDVP:Fhi(Hz)</label><br />
+          <input type="text" id="Fhi" name="Fhi" required /><br /><br />
+
+          <label for="Flo">MDVP:Flo(Hz)</label><br />
+          <input type="text" id="Flo" name="Flo" required /><br /><br />
+
+          <label for="Jitter">Jitter(%)</label><br />
+          <input type="text" id="Jitter" name="Jitter" required /><br /><br />
+
+          <label for="JitterAbs">Jitter(Abs)</label><br />
+          <input
+            type="text"
+            id="JitterAbs"
+            name="JitterAbs"
+            required
+          /><br /><br />
+
+          <label for="RAP">RAP</label><br />
+          <input type="text" id="RAP" name="RAP" required /><br /><br />
+
+          <label for="PPQ">PPQ</label><br />
+          <input type="text" id="PPQ" name="PPQ" required /><br /><br />
+
+          <label for="DDP">Jitter:DDP</label><br />
+          <input type="text" id="DDP" name="DDP" required /><br /><br />
+
+          <label for="Shimmer">MDVP:Shimmer</label><br />
+          <input type="text" id="Shimmer" name="Shimmer" required /><br /><br />
+
+          <label for="ShimmerdB">MDVP:Shimmer(dB)</label><br />
+          <input
+            type="text"
+            id="ShimmerdB"
+            name="ShimmerdB"
+            required
+          /><br /><br />
+
+          <label for="APQ3">Shimmer:APQ3</label><br />
+          <input type="text" id="APQ3" name="APQ3" required /><br /><br />
+
+          <label for="APQ5">Shimmer:APQ5</label><br />
+          <input type="text" id="APQ5" name="APQ5" required /><br /><br />
+
+          <label for="APQ">MDVP:APQ</label><br />
+          <input type="text" id="APQ" name="APQ" required /><br /><br />
+
+          <label for="DDA">Shimmer:DDA</label><br />
+          <input type="text" id="DDA" name="DDA" required /><br /><br />
+
+          <label for="NHR">NHR</label><br />
+          <input type="text" id="NHR" name="NHR" required /><br /><br />
+
+          <label for="HNR">HNR</label><br />
+          <input type="text" id="HNR" name="HNR" required /><br /><br />
+
+          <label for="RPDE">RPDE</label><br />
+          <input type="text" id="RPDE" name="RPDE" required /><br /><br />
+
+          <label for="DFA">DFA</label><br />
+          <input type="text" id="DFA" name="DFA" required /><br /><br />
+
+          <label for="spread1">spread1</label><br />
+          <input type="text" id="spread1" name="spread1" required /><br /><br />
+
+          <label for="spread2">spread2</label><br />
+          <input type="text" id="spread2" name="spread2" required /><br /><br />
+
+          <label for="D2">D2</label><br />
+          <input type="text" id="D2" name="D2" required /><br /><br />
+
+          <label for="PPE">PPE</label><br />
+          <input type="text" id="PPE" name="PPE" required /><br /><br />
+
+          <input
+            class="cursor-pointer btn btn-warning text-white font-bold"
+            type="button"
+            value="Predict"
+            onclick="predict()"
+          />
+        </form>
+      </section>
+    </div>
+
+    <div class="bg-[#63b3e8]">
+      <label for="status" class="flex justify-center py-5 text-5xl font-mono"
+        >Prediction Status:</label
+      >
+      <div class="h-[5rem] py-[5rem] text-white bg-slate-500">
+        <p class="flex justify-center text-4xl font-mono" id="status"></p>
+      </div>
+    </div>
+
+    <script>
+      function predict() {
+        document.getElementById("status").innerText = "Sending data...";
+
+        const formData = new FormData(
+          document.getElementById("predictionForm")
+        );
+        fetch("https://parkinsonakshata.pythonanywhere.com/", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.text();
+          })
+          .then((data) => {
+            document.getElementById("status").innerText = data;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            document.getElementById("status").innerText =
+              "An error occurred. Please try again.";
+          });
+      }
+    </script>
+
+    <!-- footer start -->
+
+    <footer
+      id="ContactUs"
+      class="text-center text-lg-start text-dark"
+      style="background-color: #eceff1"
+    >
+      <section
+        class="d-flex justify-content-between p-4 text-white"
+        style="background-color: #21d192"
+      >
+        <div class="me-5 h-[2rem]">
+          <span class="text-3xl"
+            >Get connected with us on social networks:</span
+          >
+        </div>
+
+        <div>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="text-3xl">
+        <div class="container text-center h-[20rem] text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">Company name</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+              <p>
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">Products</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+              <p>
+                <a href="#!" class="text-dark">MDBootstrap</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">MDWordPress</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">BrandFlow</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Bootstrap Angular</a>
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">Useful links</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+              <p>
+                <a href="#!" class="text-dark">Your Account</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Become an Affiliate</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Shipping Rates</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Help</a>
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+              <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+              <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="text-center h-[5rem] p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2024 Copyright:
+        <a class="text-dark" href="">Pankaj</a>
+      </div>
+    </footer>
+  </body>
+</html>
